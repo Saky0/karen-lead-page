@@ -1,3 +1,4 @@
+import ResponsiveImage from "@/components/ResponsiveImage";
 import { BlockText } from "@/components/ui/blockText";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -7,12 +8,12 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <section className="flex justify-between p-3 w-full gray-section">
-        <div className="container flex items-stretch">
+        <div className="container flex flex-col md:flex-row space-y-5 md:space-y-0 items-stretch">
           <div className="flex-1 p-3 flex items-stretch">
             <Image className="w-full object-cover" src={'/images/mock-livros-e-tablet-new.png'} width={400} height={400} quality={100} alt="E-book Mockup"/>
           </div>
           <div className="flex-1 flex flex-col justify-center space-y-5 p-3 text-white">
-            <h2 className="font-medium text-2xl">Preencha seus dados para receber o E-Book gratuito:</h2>
+            <h2 className="font-medium text-xl min-[420px]:text-3xl">Preencha seus dados para receber o E-Book gratuito:</h2>
             <form className="flex flex-col space-y-7">
               <div className="flex flex-col">
                 <Label className="text-lg" htmlFor="name">Nome:</Label>
@@ -25,14 +26,15 @@ export default function Home() {
                   pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" 
                   required 
                   className="box-inner-shadow text-black h-12 text-base" id="email" name="email" placeholder="email@dominio.com"/>
-              </div>
-              <button className="btn font-extrabold rounded-md uppercase tracking-wider" type="submit">Receber E-book</button>
+              </div> 
+              {/* padding: 12px 30px; */}
+              <button className="btn px-5 min-[420px]:px-8 py-4 text-base min-[420px]:text-lg font-extrabold rounded-md uppercase tracking-wider" type="submit">Receber E-book</button>
             </form>
           </div>
         </div>
       </section>
       <section className="flex justify-between p-3 w-full">
-        <div className="container flex flex-col space-y-6 items-stretch text-lg">
+        <div className="container flex flex-col space-y-6 min-[420px]:space-y-8 items-stretch text-sm min-[420px]:text-base min-[768px]:text-lg">
           <div className="flex-1 text-center">
             A motivação para escrever este e-book sobre a <strong className="font-extrabold">libido da mulher no climatério e menopausa</strong> nasceu da observação cotidiana em minhas consultas.
           </div>
@@ -45,12 +47,12 @@ export default function Home() {
         </div>
       </section>
       <section className="flex justify-between p-3 w-full gray-section">
-        <div className="container flex items-stretch">
+        <div className="container flex flex-col md:flex-row items-stretch">
           <div className="flex-1 p-3 flex items-stretch">
             <Image className="w-full object-cover" src={'/images/mock-celulares-new.png'} width={400} height={400} quality={100} alt="E-book Mockup"/>
           </div>
           <div className="flex-1 flex flex-col justify-center space-y-5 p-3 text-white">
-            <h2 className="font-medium text-2xl uppercase text-center">Acesse o conteúdo e saiba mais sobre:</h2>
+            <h2 className="font-medium text-lg min-[420px]:text-2xl uppercase text-center">Acesse o conteúdo e saiba mais sobre:</h2>
             <BlockText>Compreender a libido feminina</BlockText>
             <BlockText>Identificar as causas da queda na libido</BlockText>
             <BlockText>Adotar atitudes para melhorar a libido</BlockText>
@@ -60,27 +62,31 @@ export default function Home() {
         </div>
       </section>
       <section className="flex justify-between p-3 w-full">
-        <div className="container flex items-stretch space-x-12">
-          <div className="flex flex-1 adaptative hero-img items-stretch">
-            <Image className="w-full h-auto object-cover rounded-md" src={'/images/karen-new.png'} layout="fill" quality={100} alt="E-book Mockup"/>
+        <div className="container flex flex-col md:flex-row items-stretch space-y-3 md:space-y-0 md:space-x-12">
+          <div className="flex p-3 md:p-0 flex-1 hero-img items-stretch">
+            {/* <Image className="w-full h-auto object-cover rounded-md" src={'/images/karen-new.png'} layout="fill" quality={100} alt="E-book Mockup"/> */}
+            <ResponsiveImage 
+              src={'/images/karen-new.png'}
+              className="w-full h-auto object-cover rounded-md"
+              alt="E-book Mockup" /> 
           </div>
-          <div className="flex flex-1 adaptative flex-col space-y-8 items-stretch text-lg">
+          <div className="flex flex-1 flex-col space-y-6 min-[420px]:space-y-8 items-stretch text-sm min-[420px]:text-base min-[768px]:text-lg p-3 md:p-0">
             <div className="text-left">
               <strong className="font-extrabold">Dra Karen Samilla<br/>CRM 90874</strong>
             </div>
             <div className="text-left">
-              A Dra. Karen Samilla é médica especialista no tratamento do climatério, menopausa, emagrecimento e longevidade, dedicada a transformar a vida das mulheres com sua expertise médica e acolhimento genuíno.              
+              A Dra. Karen Samilla é médica especialista no tratamento do <strong className="font-extrabold">climatério, menopausa, emagrecimento e longevidade</strong>, dedicada a transformar a vida das mulheres com sua <strong className="font-extrabold">expertise médica e acolhimento genuíno</strong>.              
             </div>
             <div className="text-left">
-              Acredita que o climatério e a menopausa são o inicio dos melhores anos de vida, promovendo uma visão positiva dessa fase.
+              Acredita que o climatério e a menopausa são o <strong className="font-extrabold">início dos melhores anos de vida</strong>, promovendo uma <strong className="font-extrabold">visão positiva dessa fase</strong>.
             </div>
             <div className="text-left">
-              Ativa nas redes sociais, Dra. Karen Samilla compartilha informações valiosas e inspira suas seguidoras a adotarem um estilo de vida saudável e equilibrado, ajudando-as a florescerem e redescobrirem sua vitalidade e libido, mesmo durante as transformações hormonais.
+              Ativa nas redes sociais, Dra. Karen Samilla compartilha <strong className="font-extrabold">informações valiosas</strong> e inspira suas seguidoras a adotarem um <strong className="font-extrabold">estilo de vida saudável e equilibrado</strong>, ajudando-as a <strong className="font-extrabold">florescerem e redescobrirem sua vitalidade e libido</strong>, mesmo durante as transformações hormonais.
             </div>    
             <div className="text-left">
-              Siga-a no Instagram para mais dicas e informações sobre saúde feminina, climatério e menopausa.
-            </div>              
-            <a href="" className="btn block font-extrabold rounded-md uppercase tracking-wider">Marque sua Consulta</a>
+              Siga-a no Instagram para mais <strong className="font-extrabold">dicas e informações sobre saúde feminina, climatério e menopausa</strong>.
+            </div>            
+            <a href="" className="btn px-5 min-[420px]:px-8 py-4 text-base min-[420px]:text-lg block font-extrabold rounded-md uppercase tracking-wider">Marque sua Consulta</a>
           </div>
         </div>
       </section>

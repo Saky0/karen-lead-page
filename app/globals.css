@@ -103,8 +103,6 @@ section {
 
 .btn {
   display: inline-block;
-  padding: 12px 30px;
-  font-size: 18px;
   font-weight: bold;
   color: #ffffff;
   background: linear-gradient(to bottom, #929292 0%, #000000 12%);
@@ -148,17 +146,11 @@ footer {
 .hero-img {
   flex-grow: 0.6;
   position: relative;
-}
-/* 
-.hero-img .w-full {
-  height: 100%;
-}
+} 
 
-.container > .adaptative {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-} */
+.hero-img .relative {
+  height: 100%;
+} 
 
 .made-by {
   border-top-left-radius: 36px;
