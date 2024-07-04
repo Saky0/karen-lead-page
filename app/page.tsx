@@ -1,3 +1,4 @@
+import Form from "@/components/Form";
 import ResponsiveImage from "@/components/ResponsiveImage";
 import { BlockText } from "@/components/ui/blockText";
 import { Input } from "@/components/ui/input";
@@ -14,22 +15,7 @@ export default function Home() {
           </div>
           <div className="flex-1 flex flex-col justify-center space-y-5 p-3 text-white">
             <h2 className="font-medium text-xl min-[420px]:text-3xl">Preencha seus dados para receber o E-Book gratuito:</h2>
-            <form className="flex flex-col space-y-7">
-              <div className="flex flex-col">
-                <Label className="text-lg" htmlFor="name">Nome:</Label>
-                <Input required className="box-inner-shadow text-black h-12 text-base" id="name" name="name" placeholder="Digite seu nome"/>
-              </div>
-              <div className="flex flex-col mb-5">
-                <Label className="text-lg" htmlFor="email">Email:</Label>
-                <Input 
-                  type="email" 
-                  pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" 
-                  required 
-                  className="box-inner-shadow text-black h-12 text-base" id="email" name="email" placeholder="email@dominio.com"/>
-              </div> 
-              {/* padding: 12px 30px; */}
-              <button className="btn px-5 min-[420px]:px-8 py-4 text-base min-[420px]:text-lg font-extrabold rounded-md uppercase tracking-wider" type="submit">Receber E-book</button>
-            </form>
+            <Form/>
           </div>
         </div>
       </section>
@@ -86,7 +72,7 @@ export default function Home() {
             <div className="text-left">
               Siga-a no Instagram para mais <strong className="font-extrabold">dicas e informações sobre saúde feminina, climatério e menopausa</strong>.
             </div>            
-            <a href="" className="btn px-5 min-[420px]:px-8 py-4 text-base min-[420px]:text-lg block font-extrabold rounded-md uppercase tracking-wider">Marque sua Consulta</a>
+            <a href="https://wa.me/message/TW5WBQLLH3JVO1" className="btn px-5 min-[420px]:px-8 py-4 text-base min-[420px]:text-lg block font-extrabold rounded-md uppercase tracking-wider">Marque sua Consulta</a>
           </div>
         </div>
       </section>
