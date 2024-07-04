@@ -61,7 +61,7 @@ export default function Home() {
               <strong className="font-extrabold">Dra Karen Samilla<br/>CRM 90874</strong>
             </div>
             <div className="text-left">
-              A Dra. Karen Samilla é médica especialista no tratamento do <strong className="font-extrabold">climatério, menopausa, emagrecimento e longevidade</strong>, dedicada a transformar a vida das mulheres com sua <strong className="font-extrabold">expertise médica e acolhimento genuíno</strong>.              
+              A Dra. Karen Samilla é médica e dedica seu trabalho ao tratamento do <strong className="font-extrabold">climatério, menopausa, emagrecimento e longevidade</strong>, transformando a vida das mulheres com sua <strong className="font-extrabold">expertise médica e acolhimento genuíno</strong>.              
             </div>
             <div className="text-left">
               Acredita que o climatério e a menopausa são o <strong className="font-extrabold">início dos melhores anos de vida</strong>, promovendo uma <strong className="font-extrabold">visão positiva dessa fase</strong>.
