@@ -1,7 +1,7 @@
 'use client'
 
 import { NextApiResponse } from 'next';
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { Terminal } from "lucide-react";
@@ -17,22 +17,17 @@ const Form: React.FC = () => {
     const [showAlert, setShowAlert] = useState(false);
     const [alertMessage, setAlertMessage] = useState('');
     const [isLoading, setIsLoading] = useState(false);
-    const inputName = document.querySelector('#name');
-    const inputEmail = document.querySelector('#email');
-
-    // useEffect(() => {
-    //     let timer: NodeJS.Timeout;
-    //     if (showAlert) {
-    //       timer = setTimeout(() => {
-    //         setShowAlert(false);
-    //         setAlertMessage('');
-    //       }, 1000); // 10 seconds
-    //     }
-    //     return () => clearTimeout(timer);
-    //   }, [showAlert]);
+    const inputNameRef = useRef<HTMLInputElement | null>(null);
+    const inputEmailRef = useRef<HTMLInputElement | null>(null);
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
+        const inputName = inputNameRef.current;
+        const inputEmail = inputEmailRef.current;
+    
+        if (!inputName || !inputEmail) return;
+
         setIsLoading(true);
         try {
             const res = await fetch('/api/subscribe', {
@@ -56,8 +51,8 @@ const Form: React.FC = () => {
           } finally {
             setIsLoading(false);
           }
-          inputName!.value = '';
-          inputEmail!.value = '';
+          inputName.value = '';
+          inputEmail.value = '';
           setShowAlert(true);
     }
 
