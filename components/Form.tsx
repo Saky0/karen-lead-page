@@ -49,6 +49,7 @@ const Form: React.FC = () => {
             // alert('Houve um erro ao enviar o formulário. Verifique a conexão e tente novamente.');
             setAlertMessage('Houve um erro ao enviar o E-book, tente novamente.');
             // console.log(error)
+            console.log(error);
           } finally {
             setIsLoading(false);
           }

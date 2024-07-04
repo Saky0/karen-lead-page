@@ -52,17 +52,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         values: [[name, email]],
       }
     });
-
-    // var resource = {
-    //   "majorDimension": "ROWS",
-    //   "values": [[name, email]]
-    // }
-    // var range = 'UsersInfo!A:B'
-    // var optionalArgs = {valueInputOption: "USER_ENTERED"};
-    // const response = await sheetsAPI.append(resource, SPREADSHEET_ID, range, optionalArgs);
-
     res.status(200).json({ success: true });
   } catch (error: any) {
+    console.log(error);
     res.status(500).json({ success: false });
   }
 }
