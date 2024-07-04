@@ -38,7 +38,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   };
 
   try {
-    // await sgMail.send(msg);
+    await sgMail.send(msg);
 
     const sheetsAPI = await accessSpreadsheet();
 
