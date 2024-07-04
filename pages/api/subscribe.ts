@@ -38,18 +38,28 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   };
 
   try {
-    await sgMail.send(msg);
+    // await sgMail.send(msg);
 
     const sheetsAPI = await accessSpreadsheet();
 
     const response = await sheetsAPI.append({
       spreadsheetId: SPREADSHEET_ID,
-      range: 'UsersInfo!A:B', // Intervalo onde os dados serão inseridos
+      range: 'UsersInfo!A:B',
       valueInputOption: 'USER_ENTERED',
-      resource: {
+      // insertDataOption: 'INSERT_ROWS',
+      requestBody: {
+        majorDimension: "ROWS",
         values: [[name, email]],
       }
     });
+
+    // var resource = {
+    //   "majorDimension": "ROWS",
+    //   "values": [[name, email]]
+    // }
+    // var range = 'UsersInfo!A:B'
+    // var optionalArgs = {valueInputOption: "USER_ENTERED"};
+    // const response = await sheetsAPI.append(resource, SPREADSHEET_ID, range, optionalArgs);
 
     res.status(200).json({ success: true });
   } catch (error: any) {

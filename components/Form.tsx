@@ -22,13 +22,14 @@ const Form: React.FC = () => {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
+        
         const inputName = inputNameRef.current;
         const inputEmail = inputEmailRef.current;
     
         if (!inputName || !inputEmail) return;
 
         setIsLoading(true);
+
         try {
             const res = await fetch('/api/subscribe', {
                 method: 'POST',
@@ -66,6 +67,7 @@ const Form: React.FC = () => {
             className="box-inner-shadow text-black h-12 text-base" 
             id="name" 
             name="name" 
+            ref={inputNameRef}
             onChange={(e) => setName(e.target.value)}
             placeholder="Digite seu nome"/>
         </div>
@@ -74,6 +76,7 @@ const Form: React.FC = () => {
         <Input 
             type="email" 
             required 
+            ref={inputEmailRef}
             className="box-inner-shadow text-black h-12 text-base" 
             id="email" 
             name="email" 
