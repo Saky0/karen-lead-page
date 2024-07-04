@@ -33,8 +33,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     to: email,
     from: 'daviteremattos@gmail.com',
     subject: 'Acesse seu E-book grátis "LIBIDO SEM PAUSA"',
-    text: `Olá ${name},\n\nAqui está seu e-book!\n\nClique aqui para baixar agora.`,
-    html: `<p>Olá ${name},</p><p>Aqui está seu e-book!</p><p><a href="https://drive.google.com/file/d/1h6PQ0MPr_1SYmnDZqYxzVMdbepJdFzvZ/view?usp=drive_link">Clique aqui para baixar agora.</a></p>`,
+    text: `<p>Olá ${name}, aqui está seu e-book!</p><p><a href="https://drive.google.com/file/d/1h6PQ0MPr_1SYmnDZqYxzVMdbepJdFzvZ/view?usp=drive_link">Clique aqui para baixar agora.</a></p>`,
+    html: `<p>Olá ${name}, aqui está seu e-book!</p><p><a href="https://drive.google.com/file/d/1h6PQ0MPr_1SYmnDZqYxzVMdbepJdFzvZ/view?usp=drive_link">Clique aqui para baixar agora.</a></p>`,
   };
 
   try {
