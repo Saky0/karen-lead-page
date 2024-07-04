@@ -11,7 +11,7 @@ export default function Home() {
       <section className="flex justify-between p-3 w-full gray-section">
         <div className="container flex flex-col md:flex-row space-y-5 md:space-y-0 items-stretch">
           <div className="flex-1 p-3 flex items-stretch">
-            <Image className="w-full object-cover" src={'/images/mock-livros-e-tablet-new.png'} width={400} height={400} quality={100} alt="E-book Mockup"/>
+            <Image className="mock w-full object-cover" src={'/images/Mock-E-Book.png'} width={400} height={400} quality={100} alt="E-book Mockup"/>
           </div>
           <div className="flex-1 flex flex-col justify-center space-y-5 p-3 text-white">
             <h2 className="font-medium text-xl min-[420px]:text-3xl">Preencha seus dados para receber o E-Book gratuito:</h2>
@@ -35,7 +35,7 @@ export default function Home() {
       <section className="flex justify-between p-3 w-full gray-section">
         <div className="container flex flex-col md:flex-row items-stretch">
           <div className="flex-1 p-3 flex items-stretch">
-            <Image className="w-full object-cover" src={'/images/mock-celulares-new.png'} width={400} height={400} quality={100} alt="E-book Mockup"/>
+            <Image className="mock w-full object-cover" src={'/images/Mock-Celulares.png'} width={400} height={400} quality={100} alt="E-book Mockup"/>
           </div>
           <div className="flex-1 flex flex-col justify-center space-y-5 p-3 text-white">
             <h2 className="font-medium text-lg min-[420px]:text-2xl uppercase text-center">Acesse o conteúdo e saiba mais sobre:</h2>
