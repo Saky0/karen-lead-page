@@ -19,7 +19,7 @@ export default function Home() {
         </div>
       </section>
       <section className="flex justify-between w-full">
-        <div className="container flex flex-col space-y-6 min-[420px]:space-y-8 items-stretch text-lg min-[420px]:text-xl min-[1024px]:text-xl">
+        <div className="container flex flex-col space-y-6 min-[420px]:space-y-8 items-stretch text-xl min-[1024px]:text-2xl">
           <div className="flex-1 text-center">
             A motivação para escrever este e-book sobre a <strong className="font-extrabold">libido da mulher no climatério e menopausa</strong> nasceu da observação cotidiana em minhas consultas.
           </div>
@@ -55,7 +55,7 @@ export default function Home() {
               className="w-full h-auto object-cover rounded-md"
               alt="E-book Mockup" /> 
           </div>
-          <div className="flex flex-1 flex-col space-y-6 min-[420px]:space-y-8 items-stretch text-lg min-[1024px]:text-xl p-3 md:p-0">
+          <div className="flex flex-1 flex-col space-y-6 min-[420px]:space-y-8 items-stretch text-xl min-[1024px]:text-2xl p-3 md:p-0">
             <div className="text-left">
               <strong className="font-extrabold">Dra Karen Samilla<br/>CRM 90874</strong>
             </div>
