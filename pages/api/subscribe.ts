@@ -6,7 +6,7 @@ const SPREADSHEET_ID = process.env.SPREADSHEET_ID;
 
 const serviceAccountAuth = new JWT({
   email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-  key: process.env.GOOGLE_PRIVATE_KEY!.replace(/\\n/g, '\n'),
+  key: process.env.GOOGLE_PRIVATE_KEY!,
   scopes: ['https://www.googleapis.com/auth/spreadsheets'],
 });
 
@@ -34,7 +34,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       spreadsheetId: SPREADSHEET_ID,
       range: 'UsersInfo!A:B',
       valueInputOption: 'USER_ENTERED',
-      insertDataOption: 'INSERT_ROWS',
+      // insertDataOption: 'INSERT_ROWS',
       requestBody: {
         majorDimension: "ROWS",
         values: [[name, email]],

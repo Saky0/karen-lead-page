@@ -44,7 +44,7 @@ const Form: React.FC = () => {
             if (data.success) {
                 router.push('/download');
               } else {
-                setAlertMessage('Houve um erro ao enviar o E-book, tente novamente.');
+                setAlertMessage('Houve um erro ao enviar o E-book, tente novamente!');
               }
           } catch (error) {
             setAlertMessage('Houve um erro ao enviar o E-book, tente novamente.');
