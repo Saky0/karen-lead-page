@@ -14,13 +14,13 @@ export default function Home() {
             <Image className="mock w-full object-cover" src={'/images/Mock-E-Book.png'} width={400} height={400} quality={100} alt="E-book Mockup"/>
           </div>
           <div className="flex-1 flex flex-col justify-center space-y-5 p-3 text-white">
-            <h2 className="font-medium text-xl min-[420px]:text-3xl min-[1024px]:text-4xl">Preencha seus dados para receber o E-Book gratuito:</h2>
+            <h2 className="font-medium text-2xl min-[420px]:text-3xl min-[1024px]:text-4xl">Preencha seus dados para receber o e-book gratuito:</h2>
             <Form/>
           </div>
         </div>
       </section>
       <section className="flex justify-between w-full">
-        <div className="container flex flex-col space-y-6 min-[420px]:space-y-8 items-stretch text-lg min-[420px]:text-xl min-[1024px]:text-2xl">
+        <div className="container flex flex-col space-y-6 min-[420px]:space-y-8 items-stretch text-lg min-[420px]:text-xl min-[1024px]:text-xl">
           <div className="flex-1 text-center">
             A motivação para escrever este e-book sobre a <strong className="font-extrabold">libido da mulher no climatério e menopausa</strong> nasceu da observação cotidiana em minhas consultas.
           </div>

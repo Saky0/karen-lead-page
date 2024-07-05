@@ -4,7 +4,7 @@ const Footer: React.FC = () => {
     return (
         <footer className='mt-16 flex justify-center items-center px-6 pt-6 h-max'>
             <div className="container flex flex-col justify-center items-center space-y-6">
-                <div className='text-center space-y-2'>
+                <div className='text-center space-y-2 text-sm min-[420px]:text-base'>
                     <div>
                         ® {new Date().getFullYear()} Copyright - Todos os direitos Reservados a Ghost Creative
                     </div>
