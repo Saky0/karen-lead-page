@@ -1,9 +1,8 @@
 import Form from "@/components/Form";
 import ResponsiveImage from "@/components/ResponsiveImage";
 import { BlockText } from "@/components/ui/blockText";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -72,7 +71,7 @@ export default function Home() {
             <div className="text-left">
               Siga-a no Instagram para mais <strong className="font-extrabold">dicas e informações sobre saúde feminina, climatério e menopausa</strong>.
             </div>            
-            <a href="https://wa.me/message/TW5WBQLLH3JVO1" className="btn px-5 min-[420px]:px-8 py-4 text-base min-[420px]:text-lg block font-extrabold rounded-md uppercase tracking-wider">Marque sua Consulta</a>
+            <Link href="https://wa.me/message/TW5WBQLLH3JVO1" className="btn px-5 min-[420px]:px-8 py-4 text-base min-[420px]:text-lg block font-extrabold rounded-md uppercase tracking-wider">Marque sua Consulta</Link>
           </div>
         </div>
       </section>

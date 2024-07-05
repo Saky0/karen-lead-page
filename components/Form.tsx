@@ -1,7 +1,6 @@
 'use client'
 
-import { NextApiResponse } from 'next';
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { Terminal } from "lucide-react";
@@ -49,6 +48,7 @@ const Form: React.FC = () => {
               }
           } catch (error) {
             setAlertMessage('Houve um erro ao enviar o E-book, tente novamente.');
+            console.log(error);
           } finally {
             setIsLoading(false);
           }

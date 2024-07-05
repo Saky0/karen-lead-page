@@ -1,7 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { JWT } from 'google-auth-library';
 import { google } from 'googleapis';
-import sgMail from '@sendgrid/mail';
 
 const SPREADSHEET_ID = process.env.SPREADSHEET_ID;
 
@@ -28,14 +27,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const { name, email } = req.body;
 
-  const msg = {
-    to: email,
-    from: 'daviteremattos@gmail.com',
-    subject: 'Acesse seu E-book grátis "LIBIDO SEM PAUSA"',
-    text: `<p>Olá ${name}, aqui está seu e-book!</p><p><a href="https://drive.google.com/file/d/1h6PQ0MPr_1SYmnDZqYxzVMdbepJdFzvZ/view?usp=drive_link">Clique aqui para baixar agora.</a></p>`,
-    html: `<p>Olá ${name}, aqui está seu e-book!</p><p><a href="https://drive.google.com/file/d/1h6PQ0MPr_1SYmnDZqYxzVMdbepJdFzvZ/view?usp=drive_link">Clique aqui para baixar agora.</a></p>`,
-  };
-
   try {
     const sheetsAPI = await accessSpreadsheet();
 
@@ -43,12 +34,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       spreadsheetId: SPREADSHEET_ID,
       range: 'UsersInfo!A:B',
       valueInputOption: 'USER_ENTERED',
-      // insertDataOption: 'INSERT_ROWS',
+      insertDataOption: 'INSERT_ROWS',
       requestBody: {
         majorDimension: "ROWS",
         values: [[name, email]],
       }
     });
+
     res.status(200).json({ success: true });
   } catch (error: any) {
     console.log(error);
