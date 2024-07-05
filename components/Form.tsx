@@ -10,8 +10,10 @@ import {
     AlertDescription,
     AlertTitle,
   } from "@/components/ui/alert";
+import { useRouter } from 'next/navigation';
 
 const Form: React.FC = () => {
+    const router = useRouter();
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [showAlert, setShowAlert] = useState(false);
@@ -39,17 +41,14 @@ const Form: React.FC = () => {
                 body: JSON.stringify({ name, email })
             });
             const data = await res.json();
-            if (data) {
-                setAlertMessage('E-book enviado com sucesso!');
-            } else {
+
+            if (data.success) {
+                router.push('/download');
+              } else {
                 setAlertMessage('Houve um erro ao enviar o E-book, tente novamente.');
-            }
+              }
           } catch (error) {
-            // console.error(error);
-            // alert('Houve um erro ao enviar o formulário. Verifique a conexão e tente novamente.');
             setAlertMessage('Houve um erro ao enviar o E-book, tente novamente.');
-            // console.log(error)
-            console.log(error);
           } finally {
             setIsLoading(false);
           }

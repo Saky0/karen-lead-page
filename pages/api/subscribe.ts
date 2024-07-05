@@ -4,7 +4,6 @@ import { google } from 'googleapis';
 import sgMail from '@sendgrid/mail';
 
 const SPREADSHEET_ID = process.env.SPREADSHEET_ID;
-sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 
 const serviceAccountAuth = new JWT({
   email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
@@ -38,8 +37,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   };
 
   try {
-    await sgMail.send(msg);
-
     const sheetsAPI = await accessSpreadsheet();
 
     const response = await sheetsAPI.append({

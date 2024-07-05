@@ -7,20 +7,20 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
-      <section className="flex justify-between p-3 w-full gray-section">
+    <main className="flex flex-col items-center justify-between">
+      <section className="flex justify-between w-full gray-section">
         <div className="container flex flex-col md:flex-row space-y-5 md:space-y-0 items-stretch">
           <div className="flex-1 p-3 flex items-stretch">
             <Image className="mock w-full object-cover" src={'/images/Mock-E-Book.png'} width={400} height={400} quality={100} alt="E-book Mockup"/>
           </div>
           <div className="flex-1 flex flex-col justify-center space-y-5 p-3 text-white">
-            <h2 className="font-medium text-xl min-[420px]:text-3xl">Preencha seus dados para receber o E-Book gratuito:</h2>
+            <h2 className="font-medium text-xl min-[420px]:text-3xl min-[1024px]:text-4xl">Preencha seus dados para receber o E-Book gratuito:</h2>
             <Form/>
           </div>
         </div>
       </section>
-      <section className="flex justify-between p-3 w-full">
-        <div className="container flex flex-col space-y-6 min-[420px]:space-y-8 items-stretch text-sm min-[420px]:text-base min-[768px]:text-lg">
+      <section className="flex justify-between w-full">
+        <div className="container flex flex-col space-y-6 min-[420px]:space-y-8 items-stretch text-lg min-[420px]:text-xl min-[1024px]:text-2xl">
           <div className="flex-1 text-center">
             A motivação para escrever este e-book sobre a <strong className="font-extrabold">libido da mulher no climatério e menopausa</strong> nasceu da observação cotidiana em minhas consultas.
           </div>
@@ -32,12 +32,12 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="flex justify-between p-3 w-full gray-section">
+      <section className="flex justify-between w-full gray-section">
         <div className="container flex flex-col md:flex-row items-stretch">
           <div className="flex-1 p-3 flex items-stretch">
             <Image className="mock w-full object-cover" src={'/images/Mock-Celulares.png'} width={400} height={400} quality={100} alt="E-book Mockup"/>
           </div>
-          <div className="flex-1 flex flex-col justify-center space-y-5 p-3 text-white">
+          <div className="flex-1 flex flex-col justify-center space-y-5 p-3 text-white z-10">
             <h2 className="font-medium text-lg min-[420px]:text-2xl uppercase text-center">Acesse o conteúdo e saiba mais sobre:</h2>
             <BlockText>Compreender a libido feminina</BlockText>
             <BlockText>Identificar as causas da queda na libido</BlockText>
@@ -47,7 +47,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="flex justify-between p-3 w-full">
+      <section className="flex justify-between w-full">
         <div className="container flex flex-col md:flex-row items-stretch space-y-3 md:space-y-0 md:space-x-12">
           <div className="flex p-3 md:p-0 flex-1 hero-img items-stretch">
             {/* <Image className="w-full h-auto object-cover rounded-md" src={'/images/karen-new.png'} layout="fill" quality={100} alt="E-book Mockup"/> */}
@@ -56,7 +56,7 @@ export default function Home() {
               className="w-full h-auto object-cover rounded-md"
               alt="E-book Mockup" /> 
           </div>
-          <div className="flex flex-1 flex-col space-y-6 min-[420px]:space-y-8 items-stretch text-sm min-[420px]:text-base min-[768px]:text-lg p-3 md:p-0">
+          <div className="flex flex-1 flex-col space-y-6 min-[420px]:space-y-8 items-stretch text-lg min-[1024px]:text-xl p-3 md:p-0">
             <div className="text-left">
               <strong className="font-extrabold">Dra Karen Samilla<br/>CRM 90874</strong>
             </div>
