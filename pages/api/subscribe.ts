@@ -6,7 +6,7 @@ const SPREADSHEET_ID = process.env.SPREADSHEET_ID;
 
 const serviceAccountAuth = new JWT({
   email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-  key: process.env.GOOGLE_PRIVATE_KEY!.replace(/\\n/g, '\n'),
+  key: process.env.GOOGLE_PRIVATE_KEY!,
   scopes: ['https://www.googleapis.com/auth/spreadsheets'],
 });
 
@@ -28,6 +28,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { name, email } = req.body;
 
   try {
+const test = 1;
+
     const sheetsAPI = await accessSpreadsheet();
 
     const response = await sheetsAPI.append({
