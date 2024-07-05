@@ -20,13 +20,13 @@ export default function Home() {
       </section>
       <section className="flex justify-between w-full">
         <div className="container flex flex-col space-y-6 min-[420px]:space-y-8 items-stretch text-xl min-[1024px]:text-2xl">
-          <div className="flex-1 text-center">
+          <div className="flex-1 text-center p-3">
             A motivação para escrever este e-book sobre a <strong className="font-extrabold">libido da mulher no climatério e menopausa</strong> nasceu da observação cotidiana em minhas consultas.
           </div>
-          <div className="flex-1 text-center">
+          <div className="flex-1 text-center p-3">
             Percebi que, embora essas questões sejam comuns, muitas vezes são <strong className="font-extrabold">envoltas em silêncio</strong>, deixando as mulheres se sentindo <strong className="font-extrabold">isoladas em sua experiência</strong>.
           </div>
-          <div className="flex-1 text-center">
+          <div className="flex-1 text-center p-3">
             Mais do que um manual, <strong className="font-extrabold">LIBIDO SEM PAUSA</strong> é um convite para uma jornada de <strong className="font-extrabold">autoconhecimento, aceitação e amor-próprio</strong>. Através deste e-book, você terá as ferramentas necessaŕias para transformar essa fase da vida em um perído de florescimento, autoestima, segurança e bem-estar.
           </div>
         </div>
