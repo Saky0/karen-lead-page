@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
                         ® {new Date().getFullYear()} Copyright - Todos os direitos Reservados a Ghost Creative
                     </div>
                     <div>
-                        Dra. Karen Samilla | CRM - 90874
+                        Dra. Karen Samilla | CRM - 80974
                     </div>
                 </div>
                 <div className="made-by w-32 flex flex-col items-center h-max bg-white p-4 gap-3 text-black center">
