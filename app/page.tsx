@@ -57,7 +57,7 @@ export default function Home() {
           </div>
           <div className="flex flex-1 flex-col space-y-6 min-[420px]:space-y-8 items-stretch text-xl min-[1024px]:text-2xl p-3 md:p-0">
             <div className="text-left">
-              <strong className="font-extrabold">Dra Karen Samilla<br/>CRM 90874</strong>
+              <strong className="font-extrabold">Dra Karen Samilla<br/>CRM 80974</strong>
             </div>
             <div className="text-left">
               A Dra. Karen Samilla é médica e dedica seu trabalho ao tratamento do <strong className="font-extrabold">climatério, menopausa, emagrecimento e longevidade</strong>, transformando a vida das mulheres com sua <strong className="font-extrabold">expertise médica e acolhimento genuíno</strong>.              
